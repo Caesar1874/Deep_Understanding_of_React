@@ -18,8 +18,11 @@ var webpackDevOptions = {
 app.use(require("webpack-dev-middleware")(compiler, webpackDevOptions));
 app.use(require("webpack-hot-middleware")(compiler));
 
-app.get("*", function(req, res) {
+app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
+});
+app.get("/css/style.css", function(req, res) {
+    res.sendFile(path.join(__dirname, "/css/style.css"))
 });
 
 app.listen(8787, "0.0.0.0", function(err) {

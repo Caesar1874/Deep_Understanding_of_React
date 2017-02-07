@@ -20,7 +20,7 @@ module.exports = {
                 include: [
                     path.resolve(__dirname, "css"),
                 ],
-                loaders: ["style-loader", "css-loader", "sassLoader"]
+                loaders: ["style-loader", "css-loader", sassLoader]
             },
             {
                 test: /\.js/,
